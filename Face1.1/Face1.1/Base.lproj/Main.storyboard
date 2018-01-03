@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Face1_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWd-Ed-Dnq">
+                                <rect key="frame" x="157" y="587" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Qmh-rz-GWw"/>
+                                    <constraint firstAttribute="width" constant="60" id="lML-HN-ncX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cameraButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IhK-ie-E0v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zWd-Ed-Dnq" secondAttribute="bottom" constant="20" id="8hn-SI-0PO"/>
+                            <constraint firstItem="zWd-Ed-Dnq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZbK-eg-1bi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="zWd-Ed-Dnq" id="ebT-Ro-2BB"/>
+                        <segue destination="InX-mz-0Bs" kind="presentation" identifier="Preview_Segue" id="2aW-R6-Mxj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="57"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="t6k-fO-dqS">
+            <objects>
+                <viewController id="InX-mz-0Bs" customClass="PreviewViewController" customModule="Face1_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pw5-Ki-Kx0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDs-Nc-YCf">
+                                <rect key="frame" x="16" y="20" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButton_TouchUpInside:" destination="InX-mz-0Bs" eventType="touchUpInside" id="TFf-3n-GeL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouF-eK-Z2k">
+                                <rect key="frame" x="312" y="20" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton_TouchUpInside:" destination="InX-mz-0Bs" eventType="touchUpInside" id="XQj-8i-N1O"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bIh-tk-VJA">
+                                <rect key="frame" x="0.0" y="165" width="375" height="336"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="J8X-01-X7h"/>
+                                    <constraint firstAttribute="height" constant="336" id="aeT-6Z-LUS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bIh-tk-VJA" firstAttribute="leading" secondItem="kkC-PM-SNo" secondAttribute="leading" id="DQ5-zu-cpE"/>
+                            <constraint firstItem="bIh-tk-VJA" firstAttribute="trailing" secondItem="kkC-PM-SNo" secondAttribute="trailing" id="hhz-cp-CRQ"/>
+                            <constraint firstItem="kkC-PM-SNo" firstAttribute="bottom" secondItem="bIh-tk-VJA" secondAttribute="bottom" constant="166" id="nny-bm-RW2"/>
+                            <constraint firstItem="bIh-tk-VJA" firstAttribute="centerY" secondItem="pw5-Ki-Kx0" secondAttribute="centerY" id="sgo-R1-plA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kkC-PM-SNo"/>
+                    </view>
+                    <connections>
+                        <outlet property="photo" destination="bIh-tk-VJA" id="Qjq-Vk-P8n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEZ-BG-M32" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="56"/>
+        </scene>
+    </scenes>
+</document>
