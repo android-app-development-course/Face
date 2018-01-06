@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="toNavi" id="BYZ-38-t0r" customClass="ViewController" customModule="Face1_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXN-Ky-4Zy">
+                                <rect key="frame" x="45" y="592" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Filter_icon"/>
+                                <connections>
+                                    <action selector="FilterLibraryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAp-Kc-x3Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNR-AX-URP">
+                                <rect key="frame" x="275" y="592" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="photoLibrary_icon"/>
+                                <connections>
+                                    <action selector="ImageLibraryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6gI-ut-jBc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKJ-6Q-oz6">
+                                <rect key="frame" x="319" y="20" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="translate_icon"/>
+                                <connections>
+                                    <action selector="SwitchCameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3B-pe-lAN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2A8-SW-BCc">
+                                <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="other_icon"/>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWd-Ed-Dnq">
+                                <rect key="frame" x="157" y="587" width="70" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Qmh-rz-GWw"/>
+                                    <constraint firstAttribute="width" constant="70" id="lML-HN-ncX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cameraButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IhK-ie-E0v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zWd-Ed-Dnq" secondAttribute="bottom" constant="10" id="8hn-SI-0PO"/>
+                            <constraint firstItem="zWd-Ed-Dnq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="4.5" id="ZbK-eg-1bi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="zWd-Ed-Dnq" id="ebT-Ro-2BB"/>
+                        <outlet property="filterBtn" destination="DXN-Ky-4Zy" id="5PB-sk-ocX"/>
+                        <outlet property="photoBtn" destination="TNR-AX-URP" id="5Wp-g4-hNF"/>
+                        <outlet property="shotBtn" destination="zWd-Ed-Dnq" id="Rh3-52-6UA"/>
+                        <segue destination="InX-mz-0Bs" kind="presentation" identifier="Preview_Segue" id="2aW-R6-Mxj"/>
+                        <segue destination="WvH-LA-ijq" kind="presentation" identifier="toNavi" id="IZL-ON-alM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="57"/>
+        </scene>
+        <!--滤镜库-->
+        <scene sceneID="KV8-s2-xvC">
+            <objects>
+                <viewController id="cad-en-xLC" customClass="FilterLibraryViewController" customModule="Face1_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ddO-ko-IqR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AL-yK-ue2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Za7-sU-ezj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Filter_Image2" translatesAutoresizingMaskIntoConstraints="NO" id="Ylo-Yu-NuK">
+                                        <rect key="frame" x="0.0" y="74" width="375" height="547"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="547" id="kww-bP-0LZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTt-K8-V5l">
+                                        <rect key="frame" x="21" y="120" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="santab_icon"/>
+                                    </button>
+                                    <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXR-jh-EHH">
+                                        <rect key="frame" x="169" y="120" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="santa_icon"/>
+                                    </button>
+                                    <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq9-AG-Fvh">
+                                        <rect key="frame" x="94" y="120" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="santaH_icon"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Za7-sU-ezj" firstAttribute="leading" secondItem="Ylo-Yu-NuK" secondAttribute="leading" id="1kL-09-Q2c"/>
+                                    <constraint firstItem="Ylo-Yu-NuK" firstAttribute="top" secondItem="Za7-sU-ezj" secondAttribute="bottom" constant="18" id="2vn-By-LpF"/>
+                                    <constraint firstItem="Za7-sU-ezj" firstAttribute="top" secondItem="8AL-yK-ue2" secondAttribute="top" id="5Vg-gZ-GdA"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ylo-Yu-NuK" secondAttribute="bottom" constant="-18" id="DHe-US-aUd"/>
+                                    <constraint firstItem="Za7-sU-ezj" firstAttribute="trailing" secondItem="Ylo-Yu-NuK" secondAttribute="trailing" id="G1m-YA-E8H"/>
+                                    <constraint firstItem="Za7-sU-ezj" firstAttribute="centerX" secondItem="8AL-yK-ue2" secondAttribute="centerX" id="WCr-qf-uMS"/>
+                                    <constraint firstItem="Za7-sU-ezj" firstAttribute="leading" secondItem="8AL-yK-ue2" secondAttribute="leading" id="aYO-m1-XUP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Za7-sU-ezj" secondAttribute="trailing" id="hsk-33-uvF"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8AL-yK-ue2" firstAttribute="top" secondItem="Gdb-Er-o3W" secondAttribute="top" id="W24-hU-h1Q"/>
+                            <constraint firstAttribute="trailing" secondItem="8AL-yK-ue2" secondAttribute="trailing" id="jlU-px-eDo"/>
+                            <constraint firstItem="8AL-yK-ue2" firstAttribute="bottom" secondItem="Gdb-Er-o3W" secondAttribute="bottom" id="ktB-W9-hLC"/>
+                            <constraint firstItem="8AL-yK-ue2" firstAttribute="leading" secondItem="ddO-ko-IqR" secondAttribute="leading" id="opo-fh-34b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gdb-Er-o3W"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="滤镜库" id="GGW-LZ-eec">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Ggw-LL-uXX">
+                            <connections>
+                                <action selector="cancelButton:" destination="cad-en-xLC" id="p4B-2o-etc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="santaH_Filter" destination="KTt-K8-V5l" id="S5F-TY-JfN"/>
+                        <outlet property="santa_Filter" destination="PXR-jh-EHH" id="Brm-6M-VwB"/>
+                        <outlet property="santab_Filter" destination="oq9-AG-Fvh" id="vuz-So-kGM"/>
+                        <segue destination="Vnh-n1-74C" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainViewWithSegue:" id="tHg-96-UC8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYs-Ta-dit" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vnh-n1-74C" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="829.60000000000002" y="818.14092953523243"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="t6k-fO-dqS">
+            <objects>
+                <viewController id="InX-mz-0Bs" customClass="PreviewViewController" customModule="Face1_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pw5-Ki-Kx0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDs-Nc-YCf" userLabel="Exit">
+                                <rect key="frame" x="16" y="566" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="exit"/>
+                                <connections>
+                                    <action selector="cancelButton_TouchUpInside:" destination="InX-mz-0Bs" eventType="touchUpInside" id="TFf-3n-GeL"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n51-f4-v6B">
+                                <rect key="frame" x="0.0" y="165" width="375" height="336"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bIh-tk-VJA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="375" id="J8X-01-X7h"/>
+                                            <constraint firstAttribute="height" constant="336" id="aeT-6Z-LUS"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bIh-tk-VJA" firstAttribute="top" secondItem="n51-f4-v6B" secondAttribute="top" id="1KO-6U-dhK"/>
+                                    <constraint firstItem="bIh-tk-VJA" firstAttribute="leading" secondItem="n51-f4-v6B" secondAttribute="leading" id="5W2-uQ-HPv"/>
+                                    <constraint firstAttribute="bottom" secondItem="bIh-tk-VJA" secondAttribute="bottom" id="OMY-30-jYX"/>
+                                    <constraint firstAttribute="trailing" secondItem="bIh-tk-VJA" secondAttribute="trailing" id="v1s-T8-7nm"/>
+                                    <constraint firstItem="bIh-tk-VJA" firstAttribute="centerY" secondItem="n51-f4-v6B" secondAttribute="centerY" id="zTP-oU-kMQ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="InX-mz-0Bs" id="vJO-PT-jaf"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouF-eK-Z2k" userLabel="Save">
+                                <rect key="frame" x="162" y="566" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="download"/>
+                                <connections>
+                                    <action selector="saveButton_TouchUpInside:" destination="InX-mz-0Bs" eventType="touchUpInside" id="XQj-8i-N1O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84H-Ix-2hJ" userLabel="Share_btn">
+                                <rect key="frame" x="297" y="564" width="50" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="share_icon"/>
+                                <connections>
+                                    <segue destination="TWQ-AR-wsp" kind="presentation" id="1Wl-gP-ibH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVc-zd-tJ3" userLabel="Face_btn">
+                                <rect key="frame" x="189" y="39" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="face_icon"/>
+                                <connections>
+                                    <action selector="FaceButton:" destination="InX-mz-0Bs" eventType="touchUpInside" id="YBV-yE-b0f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsg-2x-Ss5" userLabel="AddText_btn">
+                                <rect key="frame" x="316" y="39" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="text_icon"/>
+                                <connections>
+                                    <action selector="AddTextButton:" destination="InX-mz-0Bs" eventType="touchUpInside" id="ZDb-6D-jrb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8d-7G-mhG" userLabel="Edit_btn">
+                                <rect key="frame" x="254" y="39" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="pen_icon"/>
+                                <connections>
+                                    <action selector="EditButton:" destination="InX-mz-0Bs" eventType="touchUpInside" id="ItO-Q7-jS2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="n51-f4-v6B" secondAttribute="trailing" id="6Cz-JC-mD1"/>
+                            <constraint firstItem="n51-f4-v6B" firstAttribute="centerY" secondItem="pw5-Ki-Kx0" secondAttribute="centerY" id="qau-r1-UmD"/>
+                            <constraint firstItem="n51-f4-v6B" firstAttribute="leading" secondItem="pw5-Ki-Kx0" secondAttribute="leading" id="yf2-ZG-vwZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kkC-PM-SNo"/>
+                    </view>
+                    <connections>
+                        <outlet property="ScrollView" destination="n51-f4-v6B" id="umW-lG-GvM"/>
+                        <outlet property="photo" destination="bIh-tk-VJA" id="Qjq-Vk-P8n"/>
+                        <outlet property="scrollView" destination="n51-f4-v6B" id="f7U-UH-SBa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uEZ-BG-M32" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="55.322338830584712"/>
+        </scene>
+        <!--分享-->
+        <scene sceneID="OHw-EI-J0k">
+            <objects>
+                <viewController id="Tab-YW-4U6" customClass="ShareViewController" customModule="Face1_1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BcQ-93-PZ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTa-3V-73J">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aad-zr-BJd">
+                                <rect key="frame" x="107" y="143" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Wechat_icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ms-VS-gM4">
+                                <rect key="frame" x="207" y="143" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="QQ_icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNO-vr-xxg">
+                                <rect key="frame" x="299" y="143" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Qzone_icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPx-6k-N9f">
+                                <rect key="frame" x="16" y="228" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Sina_icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aff-up-xzi">
+                                <rect key="frame" x="107" y="228" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Douban_icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLy-ow-3AM">
+                                <rect key="frame" x="16" y="143" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Moment_icon"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="z18-1k-PhC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="分享" id="nlE-uc-VKJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1zF-W0-w3D">
+                            <connections>
+                                <action selector="cancelButton:" destination="Tab-YW-4U6" id="nmH-Ak-ivQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tGc-FW-JY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2585" y="54"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zzL-5U-Nhl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TWQ-AR-wsp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FGb-QC-uqk">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tab-YW-4U6" kind="relationship" relationship="rootViewController" id="gSb-qR-xoH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTg-Dz-Mpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742.4000000000001" y="53.973013493253376"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dwR-nt-DQf">
+            <objects>
+                <navigationController storyboardIdentifier="myNavi" automaticallyAdjustsScrollViewInsets="NO" id="WvH-LA-ijq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gk1-dD-snB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cad-en-xLC" kind="relationship" relationship="rootViewController" id="lcP-aJ-wwh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mO-fW-JWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="818"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Douban_icon" width="200" height="200"/>
+        <image name="Filter_Image2" width="752" height="1168"/>
+        <image name="Filter_icon" width="200" height="200"/>
+        <image name="Moment_icon" width="200" height="200"/>
+        <image name="QQ_icon" width="200" height="200"/>
+        <image name="Qzone_icon" width="200" height="200"/>
+        <image name="Sina_icon" width="200" height="200"/>
+        <image name="Wechat_icon" width="200" height="200"/>
+        <image name="download" width="200" height="200"/>
+        <image name="exit" width="200" height="200"/>
+        <image name="face_icon" width="200" height="200"/>
+        <image name="other_icon" width="200" height="200"/>
+        <image name="pen_icon" width="200" height="200"/>
+        <image name="photoLibrary_icon" width="200" height="200"/>
+        <image name="santaH_icon" width="547" height="547"/>
+        <image name="santa_icon" width="814" height="814"/>
+        <image name="santab_icon" width="503" height="503"/>
+        <image name="share_icon" width="200" height="200"/>
+        <image name="text_icon" width="200" height="200"/>
+        <image name="translate_icon" width="200" height="200"/>
+    </resources>
+</document>
